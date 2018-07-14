@@ -1,3 +1,7 @@
+detect
+*.dSYM
+*#*
+
 # Prerequisites
 *.d
 
