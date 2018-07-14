@@ -5,8 +5,8 @@ os:
   - osx
 osx_image: xcode9.4
 before_install:
-  - brew install opencv@2
-  - export PKG_CONFIG_PATH=/usr/local/opt/opencv@2/lib/pkgconfig
+  - brew tap homebrew/science
+  - brew install opencv
 script:
   - make
 
