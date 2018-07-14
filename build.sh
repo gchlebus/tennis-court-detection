@@ -1,6 +1,9 @@
 echo "PKG_CONFIG_PATH"
-export PKG_CONFIG_PATH=/usr/local/lib/pkgconfig
 echo $PKG_CONFIG_PATH
+
+echo "pkg-config --cflags --libs opencv"
+pkg-config --cflags --libs opencv
+
 echo "make"
 make
 
