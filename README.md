@@ -29,6 +29,8 @@ Usage: ./detect video_path [output_path]
 
 The output file contains one point per line. The XY coordinates are separated by a
 semicolon ";".  The points are in the following order:
+
+```
 1.  Intersection of the upper base line with the left side line
 2.  Intersection of the lower base line with the left side line
 3.  Intersection of the lower base line with the right side line
@@ -45,4 +47,5 @@ semicolon ";".  The points are in the following order:
 14. Intersection of the lower service line with the center service line
 15. Intersection of the left side line with the net line
 16. Intersection of the right side line with the net line
+```
 
