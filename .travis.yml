@@ -1,0 +1,10 @@
+language: cpp
+compiler:
+  - g++
+os:
+  - osx
+before_install:
+  - brew install opencv@2
+script:
+  - make
+
