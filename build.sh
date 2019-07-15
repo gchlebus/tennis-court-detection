@@ -1,9 +1,14 @@
-echo "PKG_CONFIG_PATH"
-echo $PKG_CONFIG_PATH
+#!/usr/bin/env sh
 
-echo "pkg-config --cflags --libs opencv"
-pkg-config --cflags --libs opencv
+set -x
 
-echo "make"
-make
+if [ -d build ] || [ -f build ]; then
+    rm -rf build
+fi
 
+mkdir build
+cd build
+
+conan install .. --build missing
+cmake ..
+cmake --build .

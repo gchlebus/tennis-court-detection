@@ -14,7 +14,10 @@ Retrieval Methods and Applications for Multimedia 2004*, 2003.
 ```
 git clone https://github.com/gchlebus/tennis-court-detection.git
 cd tennis-court-detection
-make
+mkdir build && cd build
+conan install .. --build missing
+cmake ..
+cmake --build .
 ```
 
 # Usage
