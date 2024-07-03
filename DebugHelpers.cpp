@@ -37,8 +37,8 @@ void drawLine(const Line& line, cv::Mat& image, Scalar color, int thickness)
 {
   Line topBorder(Point2f(0, 0), Point2f(1, 0));
   Line leftBorder(Point2f(0, 0), Point2f(0, 1));
-  Line bottomBorder(Point2f(image.cols, image.rows), Point2f(1, 0));
-  Line rightBorder(Point2f(image.cols, image.rows), Point2f(0, 1));
+  Line bottomBorder(Point2f(image.cols, image.rows), Point2f(1, image.rows));
+  Line rightBorder(Point2f(image.cols, image.rows), Point2f(image.cols, 1));
 
   Point2f p1, p2;
   if (line.computeIntersectionPoint(topBorder, p1) && line.computeIntersectionPoint(bottomBorder, p2))
